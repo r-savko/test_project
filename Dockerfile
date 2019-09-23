@@ -1,7 +1,8 @@
 FROM java:8-jdk-alpine
-RUN echo $PWD
-RUN ls -la
-COPY build/libs/test_project-0.1.0.jar /usr/app/
-WORKDIR /usr/app
+
+# Create app folder
+RUN mkdir -p /var/app
+COPY . /var/app
+WORKDIR /var/app
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "test_project-0.1.0.jar"]
+ENTRYPOINT ["java", "-jar", "build/libs/test_project-0.1.0.jar"]

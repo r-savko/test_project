@@ -14,7 +14,7 @@ phases:
       - gradle build
       - echo Build version $CODEBUILD_RESOLVED_SOURCE_VERSION
       - docker build -t test_project:$CODEBUILD_RESOLVED_SOURCE_VERSION .
-      - docker tag test_project:$CODEBUILD_RESOLVED_SOURCE_VERSION $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION
+      - docker tag test_project:$CODEBUILD_RESOLVED_SOURCE_VERSION 423073966355.dkr.ecr.eu-west-1.amazonaws.com/test-repository:$CODEBUILD_RESOLVED_SOURCE_VERSION
   post_build:
     commands:
       - echo Build completed on `date`

@@ -5,4 +5,5 @@ RUN mkdir -p /var/app
 COPY build /var/app
 WORKDIR /var/app
 EXPOSE 8080
+CMD ls -la
 ENTRYPOINT ["java", "-jar", "libs/test_project-0.1.0.jar"]

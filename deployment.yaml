@@ -3,6 +3,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: test-project
+  namespace: test-project
 spec:
   replicas: 2
   strategy:
